@@ -1,5 +1,7 @@
 const selectBodyNode = document.querySelector(".c-select__body");
 const selectNode = document.querySelector(".c-select");
+let textAreaNode = document.querySelector(".c-antiPlagiarizm__textarea");
+const btnSendNode = document.querySelector(".c-antiPlagiarizm__button");
 
 function selectOption() {
   let text = this.innerText;
