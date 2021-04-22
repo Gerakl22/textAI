@@ -24,3 +24,16 @@ Array.from(selectBodyNode.children).forEach((prop) => {
 selectNode.addEventListener("click", () => {
   selectBodyNode.classList.toggle("is-active");
 });
+
+textAreaNode.addEventListener("keyup", (e) => {
+  let counterWords = e.target.value.split(" ").length;
+  console.log(counterWords);
+  counterWords >= 3
+    ? (btnSendNode.disabled = false)
+    : (btnSendNode.disabled = true);
+
+  if (counterWords >= 3 && e.code === "Enter") {
+    btnSendNode.disabled = false;
+    btnSendNode.click();
+  }
+});
